@@ -19,7 +19,7 @@ public class Game {
 
         Door.connect(chambers[0], chambers[1]);
         Door.connect(chambers[1], chambers[2], new Monster("Goblin", 1, 0, 3));
-        Door.connect(chambers[2], chambers[3], new Monster("Spider", 0, 3, 5));  // Fixed: Spider uses craft
+        Door.connect(chambers[2], chambers[3], new Monster("Spider", 0, 3, 5));
         Door.connect(chambers[3], chambers[4]);
 
         Character player = new Wizard("Gandalf");
