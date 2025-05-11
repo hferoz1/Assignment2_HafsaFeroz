@@ -1,13 +1,11 @@
 package org.example;
 
+// changed up this file because I was having trouble understanding the errors I was getting
 public class Game {
     public static void main(String[] args) {
-        System.out.println("--------------------------------------------------");
-        System.out.println("Welcome to the Dungeon Role-Playing Game!");
-        System.out.println("Find your way through the dungeon to the goal chamber.");
-        System.out.println("You must defeat monsters and pick up items along the way.");
-        System.out.println("Good luck, brave adventurer!");
-        System.out.println("--------------------------------------------------\n");
+        System.out.println("Welcome!");
+        System.out.println("Find your way through the dungeon to the end (goal chamber).");
+        System.out.println("Game starts now!");
 
         Chamber[] chambers = new Chamber[]{
                 new Chamber(),
@@ -29,16 +27,15 @@ public class Game {
         TextUI ui = new TextUI();
         ui.play(d);
 
-        System.out.println("\n--------------------------------------------------");
+        System.out.println("\n");
         if (player.isAlive() && d.getCurrentChamber() == chambers[4]) {
             System.out.println("Congratulations! You've reached the goal chamber and won the game!");
         } else if (!player.isAlive()) {
             System.out.println("Game Over! Your character has been defeated.");
         } else {
-            System.out.println("You have left the game before reaching the goal.");
+            System.out.println("You have left the game.");
         }
 
-        System.out.println("Thank you for playing the Dungeon Role-Playing Game!");
-        System.out.println("--------------------------------------------------");
+        System.out.println("Thank you for playing!");
     }
 }
